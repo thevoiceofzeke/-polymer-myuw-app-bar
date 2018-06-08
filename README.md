@@ -1,5 +1,7 @@
 # \<myuw-app-bar\>
 
+![top bar image](https://image.ibb.co/fzGPSo/Screen_Shot_2018_06_08_at_12_51_10_PM.png)
+
 Top app bar based on Material guidelines and the UW-Madison app style guide, developed with [Polymer 3](https://www.polymer-project.org/).
 
 ## How to use
