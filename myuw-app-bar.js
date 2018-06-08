@@ -59,9 +59,19 @@ class MyuwAppBar extends PolymerElement {
               <slot name="myuw-navigation"/>
             </div>
             <div class="title">
-              <a href=[[themeUrl]] target="_self">[[themeName]]</a>
+              <template is="dom-if" if="{{themeUrl}}">
+                <a href=[[themeUrl]] target="_self">[[themeName]]</a>
+              </template>
+              <template is="dom-if" if="{{!themeUrl}}">
+                <span>[[themeName]]</span>
+              </template>
               &nbsp;
-              <a href=[[appUrl]] target="_self">[[appName]]</a>
+              <template is="dom-if" if="{{appUrl}}">
+                <a href=[[appUrl]] target="_self">[[appName]]</a>
+              </template>
+              <template is="dom-if" if="{{!appUrl}}">
+                <span>[[appName]]</span>
+              </template>
             </div>
             <div class="region__help">
               <slot name="myuw-help"/>
@@ -85,7 +95,7 @@ class MyuwAppBar extends PolymerElement {
       },
       themeUrl: {
         type: String,
-        value: 'https://my.wisc.edu',
+        value: '',
       },
       appName: {
         type: String,

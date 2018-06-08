@@ -31,7 +31,9 @@ Use the tag in your HTML:
 ### Configurable properties
 
 - **themeName (theme-name):** Sets the theme/portal name (defaults to "MyUW")
+- **themeUrl (theme-url):** Sets then URL to go to when user clicks the theme name
 - **appName (app-name):** Sets the app name (e.g. "Bucky Backup"), empty by default
+- **appUrl (app-url):** Sets then URL to go to when user clicks the app name
 - **background:** Sets the top bar's background color (defaults to UW-Madison branding -- #c5050c)
 - **color:** Sets the top bar's text color (defaults to white)
 
