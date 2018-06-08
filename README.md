@@ -6,6 +6,28 @@ Top app bar based on Material guidelines and the UW-Madison app style guide, dev
 
 ## How to use
 
+There are two ways to use this component in your project:
+1. As a `<script>` tag in your page's `<head>` **(WIP)**
+2. As an npm dependency (for Node projects)
+
+### Using the script tag
+
+This method is a work in progress.
+
+### Using the NPM package
+
+Install the package as a dependency of your project:
+
+```
+$ npm i --save @myuw-web-components/myuw-app-bar
+```
+
+Use the tag in your HTML:
+
+```HTML
+<myuw-app-bar></myuw-app-bar>
+```
+
 ### Configurable properties
 
 - **themeName (theme-name):** Sets the theme/portal name (defaults to "MyUW")
