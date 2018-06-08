@@ -1,18 +1,47 @@
 # \<myuw-app-bar\>
 
-Top app bar based on Material guidelines and the UW-Madison app style guide
+Top app bar based on Material guidelines and the UW-Madison app style guide, developed with [Polymer 3](https://www.polymer-project.org/).
 
-## Install the Polymer-CLI
+## How to use
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) and npm (packaged with [Node.js](https://nodejs.org)) installed. Run `npm install` to install your element's dependencies, then run `polymer serve` to serve your element locally.
+### Configurable properties
 
-## Viewing Your Element
+- **themeName (theme-name):** Sets the theme/portal name (defaults to "MyUW")
+- **appName (app-name):** Sets the app name (e.g. "Bucky Backup"), empty by default
+- **background:** Sets the top bar's background color (defaults to UW-Madison branding -- #c5050c)
+- **color:** Sets the top bar's text color (defaults to white)
+
+### Slots for child components
+
+*Note: These slots are meant to be used with components in the "myuw" namespace. The child components listed below are works in progress.*
+
+- **myuw-navigation**: Insert the `<myuw-navigation-drawer>` component
+- **myuw-help**: Insert the `<myuw-help-and-feedback>` component
+- **myuw-notifications**:  Insert the `<myuw-notifications>` component
+- **myuw-profile**: Insert the `<myuw-profile>` component
+
+#### Using slots
+
+To insert a component into the appropriate slot, add a "slot" attribute to your component's HTML tag with the corresponding slot name. For example:
+
+```HTML
+<myuw-app-bar>
+    <myuw-navigation slot="myuw-navigation"></myuw-navigation>
+</myuw-app-bar>
+```
+
+## Development and contribution
+
+### Running locally
+
+First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) and npm (packaged with [Node.js](https://nodejs.org)) installed.
 
 ```
+$ npm install
 $ polymer serve
 ```
 
-## Running Tests
+### Running tests
 
 ```
 $ polymer test

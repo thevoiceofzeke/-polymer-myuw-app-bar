@@ -69,7 +69,7 @@ class MyuwAppBar extends PolymerElement {
       },
       appName: {
         type: String,
-        value: 'Bucky Backup',
+        value: '',
       },
       background: {
         type: String,
