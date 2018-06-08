@@ -32,9 +32,23 @@ class MyuwAppBar extends PolymerElement {
         app-header .region__help {
           margin: 0 6px;
         }
-        app-header .theme-name,
-        app-header .app-name {
-          font-weight: 300
+        app-header .title {
+          height: 100%;
+          font-weight: 300;
+          display: flex;
+          flex: auto;
+          align-items: center;
+        }
+        app-header .title a {
+          text-decoration: none;
+          color: inherit;
+        }
+        app-header .title a:hover {
+          text-decoration: none;
+          cursor: pointer;
+        }
+        app-header .title a:visited {
+          color: inherit;
         }
       </style>
 
@@ -44,8 +58,10 @@ class MyuwAppBar extends PolymerElement {
             <div class="region__navigation">
               <slot name="myuw-navigation"/>
             </div>
-            <div main-title class="theme-name">
-              [[themeName]]&nbsp;[[appName]]
+            <div class="title">
+              <a href=[[themeUrl]] target="_self">[[themeName]]</a>
+              &nbsp;
+              <a href=[[appUrl]] target="_self">[[appName]]</a>
             </div>
             <div class="region__help">
               <slot name="myuw-help"/>
@@ -67,7 +83,15 @@ class MyuwAppBar extends PolymerElement {
         type: String,
         value: 'MyUW',
       },
+      themeUrl: {
+        type: String,
+        value: 'https://my.wisc.edu',
+      },
       appName: {
+        type: String,
+        value: '',
+      },
+      appUrl: {
         type: String,
         value: '',
       },
