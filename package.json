@@ -1,5 +1,5 @@
 {
-  "name": "myuw-app-bar",
+  "name": "@myuw-web-components/myuw-app-bar",
   "version": "0.0.1",
   "description": "Top app bar based on Material guidelines and the UW-Madison app style guide, developed with Polymer 3",
   "main": "myuw-app-bar.js",
@@ -12,5 +12,21 @@
     "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
     "@webcomponents/webcomponentsjs": "^2.0.0",
     "wct-browser-legacy": "^1.0.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "polymer test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myuw-web-components/myuw-app-bar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myuw-web-components/myuw-app-bar/issues"
+  },
+  "homepage": "https://github.com/myuw-web-components/myuw-app-bar#readme"
 }
