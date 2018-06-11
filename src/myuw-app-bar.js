@@ -19,6 +19,9 @@ class MyuwAppBar extends PolymerElement {
   static get template() {
     return html`  
       <style>
+        app-header {
+          width: 100%;
+        }
         app-header .region__navigation {
           margin-right: 16px;
         }

@@ -33,7 +33,7 @@ This component is set up to be tested via [web-component-tester](https://github.
 Include the following script tag in your document `<head>`:
 
 ```html
-<script src="https://unpkg.com/@myuw-web-components/myuw-app-bar@0.1.0">
+<script src="https://unpkg.com/@myuw-web-components/myuw-app-bar@0.1.1">
 ```
 
 ### Using the NPM package
