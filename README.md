@@ -25,23 +25,26 @@ This component is set up to be tested via [web-component-tester](https://github.
 
 ## How to use
 
-There are two ways to use this component in your project:
-1. As a `<script>` tag in your page's `<head>` **(WIP)**
-2. As an npm dependency (for Node projects)
+1. Include the component as a dependency (either via CDN or as a project dependency via node)
+2. Add a script tag to the document `<head>` to get the `myuw-app-bar.js` file
 
-### Using the script tag
+### Using a CDN
 
-This method is a work in progress.
+Include the following script tag in your document `<head>`:
+
+```html
+<script src="https://unpkg.com/@myuw-web-components/myuw-app-bar@0.1.0">
+```
 
 ### Using the NPM package
 
-Install the package as a dependency of your project:
+Install the package as a dependency of your project (then use a script tag point to /node_modules):
 
 ```
 $ npm i --save @myuw-web-components/myuw-app-bar
 ```
 
-Use the tag in your HTML:
+### Then use the tag in your HTML
 
 ```HTML
 <myuw-app-bar
@@ -56,7 +59,7 @@ Use the tag in your HTML:
 </myuw-app-bar>
 ```
 
-### Configurable properties
+#### Configurable properties
 
 - **themeName (theme-name):** Sets the theme/portal name (defaults to "MyUW")
 - **themeUrl (theme-url):** Sets then URL to go to when user clicks the theme name
@@ -66,7 +69,7 @@ Use the tag in your HTML:
 - **color:** Sets the top bar's text color (defaults to white)
 - **font:** Sets the CSS `font-family` attribute on the `<app-header>` element. The specified font must be included on the document, or the header will default to `Roboto, Arial, sans-serif`.
 
-### Slots for child components
+#### Slots for child components
 
 *Note: These slots are meant to be used with components in the "myuw" namespace. The child components listed below are works in progress.*
 
@@ -75,7 +78,7 @@ Use the tag in your HTML:
 - **myuw-notifications**:  Insert the `<myuw-notifications>` component
 - **myuw-profile**: Insert the `<myuw-profile>` component
 
-#### Using slots
+**Using slots**:
 
 To insert a component into the appropriate slot, add a "slot" attribute to your component's HTML tag with the corresponding slot name. For example:
 
