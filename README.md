@@ -4,6 +4,25 @@
 
 Top app bar based on Material guidelines and the UW-Madison app style guide, developed with [Polymer 3](https://www.polymer-project.org/).
 
+## Development and contribution
+
+### Running locally
+
+First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) and npm (packaged with [Node.js](https://nodejs.org)) installed.
+
+```
+$ npm install
+$ npm start
+```
+
+### Running tests
+
+```
+$ polymer test
+```
+
+This component is set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester).
+
 ## How to use
 
 There are two ways to use this component in your project:
@@ -55,22 +74,3 @@ To insert a component into the appropriate slot, add a "slot" attribute to your 
     <myuw-navigation slot="myuw-navigation"></myuw-navigation>
 </myuw-app-bar>
 ```
-
-## Development and contribution
-
-### Running locally
-
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) and npm (packaged with [Node.js](https://nodejs.org)) installed.
-
-```
-$ npm install
-$ polymer serve
-```
-
-### Running tests
-
-```
-$ polymer test
-```
-
-This component is set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester).
