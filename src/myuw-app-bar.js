@@ -13,14 +13,14 @@ import '@polymer/paper-styles/typography.js';
  *
  * @customElement
  * @polymer
- * @demo demo/index.html
+ * @demo index.html
  */
 class MyuwAppBar extends PolymerElement {
   static get template() {
     return html`  
       <style>
         app-header {
-          font-family: 'Roboto', 'Noto', sans-serif;
+          width: 100%;
         }
         app-header .region__navigation {
           margin-right: 16px;
@@ -51,9 +51,9 @@ class MyuwAppBar extends PolymerElement {
           color: inherit;
         }
       </style>
-
       <app-header-layout>
-        <app-header slot="header" fixed effects="waterfall" style="background:[[background]]; color:[[color]]">
+        <app-header slot="header" fixed effects="waterfall" 
+          style="background:[[background]]; color:[[color]]; font-family: [[font]];">
           <app-toolbar>
             <div class="region__navigation">
               <slot name="myuw-navigation"/>
@@ -113,6 +113,10 @@ class MyuwAppBar extends PolymerElement {
         type: String,
         value: '#fff',
       },
+      font: {
+        type: String,
+        value: '"Roboto", Arial, sans-serif',
+      }
     };
   }
 }
