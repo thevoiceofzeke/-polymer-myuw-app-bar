@@ -20,7 +20,7 @@
   },
   "scripts": {
     "test": "polymer test",
-    "start": "polymer serve",
+    "start": "npm run build && polymer serve",
     "build": "webpack --config webpack.config.js"
   },
   "repository": {
