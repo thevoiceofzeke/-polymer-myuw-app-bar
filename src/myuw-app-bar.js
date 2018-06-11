@@ -19,9 +19,6 @@ class MyuwAppBar extends PolymerElement {
   static get template() {
     return html`  
       <style>
-        app-header {
-          font-family: 'Montserrat', sans-serif;
-        }
         app-header .region__navigation {
           margin-right: 16px;
         }
@@ -52,7 +49,8 @@ class MyuwAppBar extends PolymerElement {
         }
       </style>
       <app-header-layout>
-        <app-header slot="header" fixed effects="waterfall" style="background:[[background]]; color:[[color]]">
+        <app-header slot="header" fixed effects="waterfall" 
+          style="background:[[background]]; color:[[color]]; font-family: [[font]];">
           <app-toolbar>
             <div class="region__navigation">
               <slot name="myuw-navigation"/>
@@ -112,6 +110,10 @@ class MyuwAppBar extends PolymerElement {
         type: String,
         value: '#fff',
       },
+      font: {
+        type: String,
+        value: '"Roboto", Arial, sans-serif',
+      }
     };
   }
 }
