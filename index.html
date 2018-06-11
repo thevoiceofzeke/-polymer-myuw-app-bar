@@ -1,15 +1,54 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0;url=demo/" />
-    <title>myuw-app-bar</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>myuw-app-bar demo</title>
+    
+    <!-- Dependencies for material icons and Roboto font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Styles for demo purposes ONLY, not to ship with the component -->
+    <link href="demo.css" rel="stylesheet">
+
+    <!-- Load the bundled component -->
+    <script src="./dist/myuw-app-bar.js"></script>
   </head>
   <body>
-    <!--
-        Visit demo/index.html to see live examples of your element running.
-        This page will automatically redirect you there when run in the browser
-        with `polymer serve`.
-      -->
+    <myuw-app-bar>
+      <span slot="myuw-navigation">
+          <button class="demo__toolbar-button menu">
+              <i class="material-icons">menu</i>
+          </button>
+      </span>
+      <span slot="myuw-help">
+        <button class="demo__toolbar-button help">
+            <i class="material-icons">help</i>
+        </button>
+      </span>
+      <span slot="myuw-notifications">
+        <button class="demo__toolbar-button notifications">
+            <i class="material-icons">notifications</i>
+        </button>
+      </span>
+      <span slot="myuw-profile">
+        <button class="demo__toolbar-button profile">
+          <div class="demo__profile-letter">
+            B
+          </div>
+        </button>
+      </span>
+    </myuw-app-bar>
+    <div class="demo__container">
+      <div class="demo__test-content">
+        <div class="demo__grid-box">Box 1</div>
+        <div class="demo__grid-box">Box 2</div>
+        <div class="demo__grid-box">Box 3</div>
+        <div class="demo__grid-box">Box 4</div>
+        <div class="demo__grid-box">Box 5</div>
+        <div class="demo__grid-box">Box 6</div>
+      </div>
+    </div>
   </body>
 </html>
