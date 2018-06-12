@@ -114,10 +114,6 @@ class MyuwAppBar extends PolymerElement {
       color: {
         type: String,
         value: '#fff',
-      },
-      font: {
-        type: String,
-        value: '"Roboto", Arial, sans-serif',
       }
     };
   }

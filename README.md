@@ -54,7 +54,6 @@ $ npm i --save @myuw-web-components/myuw-app-bar
     appUrl=""
     background=""
     color=""
-    font=""
 >
 </myuw-app-bar>
 ```
@@ -67,7 +66,6 @@ $ npm i --save @myuw-web-components/myuw-app-bar
 - **appUrl (app-url):** Sets then URL to go to when user clicks the app name
 - **background:** Sets the top bar's background color (defaults to UW-Madison branding -- #c5050c)
 - **color:** Sets the top bar's text color (defaults to white)
-- **font:** Sets the CSS `font-family` attribute on the `<app-header>` element. The specified font must be included on the document, or the header will default to `Roboto, Arial, sans-serif`.
 
 #### Slots for child components
 
