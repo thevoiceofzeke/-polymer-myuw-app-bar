@@ -1,6 +1,6 @@
 {
   "name": "@myuw-web-components/myuw-app-bar",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Top app bar based on Material guidelines and the UW-Madison app style guide, developed with Polymer 3",
   "main": "dist/myuw-app-bar.js",
   "dependencies": {
