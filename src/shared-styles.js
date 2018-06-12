@@ -4,8 +4,6 @@ import './fonts';
 const $_documentContainer = document.createElement('div');
 $_documentContainer.setAttribute('style', 'display: none;');
 
-console.log('script executed');
-
 $_documentContainer.innerHTML = `<custom-style>
   <style is="myuw-custom-style">
     html, app-header {
