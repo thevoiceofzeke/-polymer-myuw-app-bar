@@ -7,6 +7,8 @@ import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 import '@polymer/paper-styles/default-theme.js';
 import '@polymer/paper-styles/typography.js';
 
+import './shared-styles';
+
 /**
  * `myuw-app-bar`
  * Top app bar based on Material guidelines and the UW-Madison app style guide
@@ -21,6 +23,7 @@ class MyuwAppBar extends PolymerElement {
       <style>
         app-header {
           width: 100%;
+          @apply --myuw-app-bar-font;
         }
         app-header .region__navigation {
           margin-right: 16px;
@@ -34,10 +37,11 @@ class MyuwAppBar extends PolymerElement {
         }
         app-header .title {
           height: 100%;
-          font-weight: 300;
+          font-weight: 400;
           display: flex;
           flex: auto;
           align-items: center;
+          @apply --myuw-app-bar-title;
         }
         app-header .title a {
           text-decoration: none;
@@ -51,14 +55,13 @@ class MyuwAppBar extends PolymerElement {
           color: inherit;
         }
       </style>
-      <app-header-layout>
-        <app-header slot="header" fixed effects="waterfall" 
-          style="background:[[background]]; color:[[color]]; font-family: [[font]];">
-          <app-toolbar>
-            <div class="region__navigation">
-              <slot name="myuw-navigation"/>
-            </div>
-            <div class="title">
+      <app-header slot="header" fixed effects="waterfall" 
+        style="background:[[background]]; color:[[color]];">
+         <app-toolbar>
+           <div class="region__navigation">
+             <slot name="myuw-navigation"/>
+           </div>
+           <div class="title">
               <template is="dom-if" if="{{themeUrl}}">
                 <a href=[[themeUrl]] target="_self">[[themeName]]</a>
               </template>
@@ -84,7 +87,6 @@ class MyuwAppBar extends PolymerElement {
             </div>
           </app-toolbar>
         </app-header>
-      </app-header-layout>
     `;
   }
   static get properties() {
@@ -112,10 +114,6 @@ class MyuwAppBar extends PolymerElement {
       color: {
         type: String,
         value: '#fff',
-      },
-      font: {
-        type: String,
-        value: '"Roboto", Arial, sans-serif',
       }
     };
   }
