@@ -55,6 +55,7 @@ class MyuwAppBar extends PolymerElement {
           color: inherit;
         }
       </style>
+      <app-header-layout>
       <app-header slot="header" fixed effects="waterfall" 
         style="background:[[background]]; color:[[color]];">
          <app-toolbar>
@@ -87,6 +88,7 @@ class MyuwAppBar extends PolymerElement {
             </div>
           </app-toolbar>
         </app-header>
+        </app-header-layout>
     `;
   }
   static get properties() {

@@ -1,4 +1,3 @@
-import '@polymer/polymer';
 import './fonts';
 
 const $_documentContainer = document.createElement('div');
